@@ -1,27 +1,57 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Program
+namespace Восьмая_программа
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.Write("Введите начальный диапозон A: ");
-        int A = int.Parse(Console.ReadLine());
-        Console.Write("Введите коненый диапозон B: ");
-        int B = int.Parse(Console.ReadLine());
-        Console.Write("Введите X: ");
-        int X = int.Parse(Console.ReadLine());
-        Console.Write("Введите Y: ");
-        int Y = int.Parse(Console.ReadLine());
-
-        int i = A;
-
-        while (i < B)
+        static void Main(string[] args)
         {
-            if ((i - X) % 10 == 0 || (i - Y) % 10 == 0)
-                Console.WriteLine(i);
-            i++;
-        }
+            
+            Console.Title = "Программа для работы с циклами for, while, do while";
 
-        Console.ReadKey();
+            Console.Write("Введите число X = ");
+            int X = int.Parse(Console.ReadLine());
+            Console.Write("Введите начальный диапазон = ");
+            int A = int.Parse(Console.ReadLine());
+            Console.Write("Введите конечный диапазон = ");
+            int B = int.Parse(Console.ReadLine());
+            while (A % 10 != X)
+            {
+                A++;
+            }
+            while (B % 10 != X)
+            {
+                B--;
+            }
+            int i;
+            Console.WriteLine();
+            Console.WriteLine("For: ");
+            for (i = A; i <= B; i += 10)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine();
+            Console.WriteLine("While: ");
+            i = A;
+            while (i <= B)
+            {
+                Console.WriteLine(i);
+                i += 10;
+            }
+            Console.WriteLine();
+            Console.WriteLine("Do while: ");
+            i = A;
+            do
+            {
+                Console.WriteLine(i);
+                i += 10;
+            }
+            while (i <= B);
+            Console.ReadLine();
+        }
     }
 }
