@@ -1,0 +1,19 @@
+using System;
+namespace Hello
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите x=");
+            float x = float.Parse(Console.ReadLine());
+            Console.Write("Введите y=");
+            float y = float.Parse(Console.ReadLine());
+            if (x < 50 && x > -50 && y < 25 && y > -25)
+                Console.WriteLine("Да");
+            else if (x > 50 || x < -50 || y > 25 || y < -25)
+                Console.WriteLine("Нет");
+            else Console.WriteLine("На границе");
+        }
+    }
+}
