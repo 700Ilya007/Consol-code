@@ -1,0 +1,15 @@
+using System;
+class HelloWorld
+{
+    static void Main()
+    {
+        Console.Write("Введите двузначное число: ");
+        char[] number = Console.ReadLine().ToCharArray();
+        int mod = (int.Parse(number[0].ToString()) + int.Parse(number[1].ToString())) % 3;
+        if (mod == 0)
+            Console.WriteLine("Число кратно 3");
+        else
+            Console.WriteLine("Число не кратно 3 ");
+        Console.ReadKey();
+    }
+ }
