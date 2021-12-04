@@ -1,0 +1,33 @@
+using System;
+
+namespace ConsoleApp20
+
+{
+    internal sealed class Crazy
+{
+    public int method(int number)
+    {
+        if (number % 5 == 0) number /= 5;
+        else number++;
+        return number;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Crazy obj = new Crazy();
+        int result;
+
+        do
+        {
+            result = obj.method(Convert.ToInt32(Console.ReadLine()));
+            Console.Write(result);
+            Console.ReadKey();
+            Console.Clear();
+        }
+        while (true);
+    }
+}
+}
